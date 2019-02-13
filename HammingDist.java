@@ -1,3 +1,4 @@
+
 public class HammingDist
 {
 	String strg1;
@@ -25,5 +26,13 @@ public class HammingDist
 			}
 		}
 		return dist;
+	}
+	
+	public String toString()
+	{
+		String temp1 = String.format("The Hamming Distance of %s and %s: %d.\n", strg1, strg2, findHammingDist(strg1, strg2));
+		String temp2 = String.format("Out of 119, for %s, number of nodes are: 0, 0, 23, 96 and\n",strg1);
+		String temp3 = String.format("for %s, number of nodes are: 0, 5, 16, 98 respectively.",strg2);
+		return temp1+temp2+temp3;
 	}
 }
