@@ -2,7 +2,6 @@ public class HammingDist
 {
 	String strg1;
 	String strg2;
-	int idk = 0;
 	int node1;
 	int node2;
 	int node3;
@@ -15,5 +14,16 @@ public class HammingDist
 		this.strg2 = strg2;
 	}
 	
-	
+	public int findHammingDist(String strg1, String strg2)
+	{
+		int dist = 0;
+		for (int k = 0; k < 4; k++)
+		{
+			if (strg1.charAt(k) != strg2.charAt(k))
+			{
+				dist++;
+			}
+		}
+		return dist;
+	}
 }
