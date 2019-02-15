@@ -80,6 +80,8 @@ public class HammingDist
 				case 4:
 					nodes.set(3, temp);
 					break;
+				default:
+					break;
 				}
 			}
 		}
