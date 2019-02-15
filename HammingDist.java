@@ -72,6 +72,7 @@ public class HammingDist
 	public ArrayList<Integer> findNodes(String strg)
 	{
 		ArrayList<Integer> nodes = new ArrayList<Integer>();
+		//Adds enough space for each of the node values
 		nodes.add(0);
 		nodes.add(0);
 		nodes.add(0);
