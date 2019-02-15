@@ -64,6 +64,10 @@ public class HammingDist
 		return dist;
 	}
 	
+	/*
+	 * Fills an Integer Array List with the number of STIDs that share a Hamming Distance with the specified STID
+	 * 
+	 */
 	public ArrayList<Integer> findNodes(String strg)
 	{
 		ArrayList<Integer> nodes = new ArrayList<Integer>();
