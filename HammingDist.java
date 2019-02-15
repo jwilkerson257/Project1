@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class HammingDist
 {
@@ -7,12 +12,29 @@ public class HammingDist
 	int node2;
 	int node3;
 	int node4;
-	
+	ArrayList<Integer> nodes = new ArrayList<Integer>();
 	
 	public HammingDist(String strg1, String strg2)
 	{
 		this.strg1 = strg1;
 		this.strg2 = strg2;
+	}
+	
+	public void readFile() throws IOException
+	{
+		BufferedReader in = new BufferedReader(new FileReader(new File("Mesonet.txt")));
+		in.readLine();
+		in.readLine();
+		in.readLine();
+		for (int k = 0; k < 119; k++)
+		{
+			String temp = in.readLine();
+			temp = temp.substring(1,5);
+			
+		}
+		in.close();
+		
+		
 	}
 	
 	public int findHammingDist(String strg1, String strg2)
@@ -26,6 +48,11 @@ public class HammingDist
 			}
 		}
 		return dist;
+	}
+	
+	public ArrayList<Integer> findNodes(String strg1, String strg2)
+	{
+		return nodes;
 	}
 	
 	public String toString()
