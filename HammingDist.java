@@ -8,11 +8,7 @@ public class HammingDist
 {
 	String strg1;
 	String strg2;
-	int node1;
-	int node2;
-	int node3;
-	int node4;
-	ArrayList<Integer> nodes = new ArrayList<Integer>();
+	ArrayList<String> STID = new ArrayList<String>();
 	
 	public HammingDist(String strg1, String strg2)
 	{
@@ -26,11 +22,13 @@ public class HammingDist
 		in.readLine();
 		in.readLine();
 		in.readLine();
-		for (int k = 0; k < 119; k++)
+		int count = 0;
+		while (count < 120)
 		{
 			String temp = in.readLine();
 			temp = temp.substring(1,5);
-			
+			STID.add(temp);
+			count++;
 		}
 		in.close();
 		
@@ -52,6 +50,16 @@ public class HammingDist
 	
 	public ArrayList<Integer> findNodes(String strg1, String strg2)
 	{
+		ArrayList<Integer> nodes = new ArrayList<Integer>();
+		nodes.add(0);
+		nodes.add(0);
+		nodes.add(0);
+		nodes.add(0);
+		int dist = 0;
+		for (int k = 0; k < STID.size(); k++)
+		{
+			dist = findHammingDist(strg1, STID.get(k));
+		}
 		return nodes;
 	}
 	
