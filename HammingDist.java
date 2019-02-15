@@ -85,6 +85,7 @@ public class HammingDist
 			{
 				dist = findHammingDist(strg, STID.get(k));
 				temp = nodes.get(dist-1) + 1;
+				//The switch statement increases the value of the element in the array that corresponds with hamming distance
 				switch (dist)
 				{
 				case 1:
