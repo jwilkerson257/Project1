@@ -9,11 +9,12 @@ public class HammingDist
 	String strg1;
 	String strg2;
 	ArrayList<String> STID = new ArrayList<String>();
+	String srcFile = "Mesonet.txt";
 	
 	
 	public void readFile() throws IOException
 	{
-		BufferedReader in = new BufferedReader(new FileReader(new File("Mesonet.txt")));
+		BufferedReader in = new BufferedReader(new FileReader(new File(srcFile)));
 		in.readLine();
 		in.readLine();
 		in.readLine();
