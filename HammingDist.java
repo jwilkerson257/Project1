@@ -18,9 +18,10 @@ public class HammingDist
 		in.readLine();
 		in.readLine();
 		int count = 0;
+		String temp = "";
 		while (count < 120)
 		{
-			String temp = in.readLine();
+			temp = in.readLine();
 			temp = temp.substring(1,5);
 			STID.add(temp);
 			count++;
@@ -61,7 +62,7 @@ public class HammingDist
 		int temp = 0;
 		for (int k = 0; k < STID.size(); k++)
 		{
-			if (dist != 0)
+			if (!strg.equals(STID.get(k)))
 			{
 				dist = findHammingDist(strg, STID.get(k));
 				temp = nodes.get(dist-1) + 1;
@@ -88,9 +89,11 @@ public class HammingDist
 	
 	public String toString()
 	{
+		ArrayList<Integer> nodesFirstString = findNodes(strg1);
+		ArrayList<Integer> nodesSecondString = findNodes(strg2);
 		String temp1 = String.format("The Hamming Distance of %s and %s: %d.\n", strg1, strg2, findHammingDist(strg1, strg2));
-		String temp2 = String.format("Out of 119, for %s, number of nodes are: %d, %d, %d, %d and\n",strg1, findNodes(strg1).get(0), findNodes(strg1).get(1), findNodes(strg1).get(2), findNodes(strg1).get(3));
-		String temp3 = String.format("for %s, number of nodes are: %d, %d, %d, %d respectively.",strg2, findNodes(strg2).get(0), findNodes(strg2).get(1), findNodes(strg2).get(2), findNodes(strg2).get(3));
+		String temp2 = String.format("Out of 119, for %s, number of nodes are: %d, %d, %d, %d and\n",strg1, nodesFirstString.get(0), nodesFirstString.get(1), nodesFirstString.get(2), nodesFirstString.get(3));
+		String temp3 = String.format("for %s, number of nodes are: %d, %d, %d, %d respectively.",strg2, nodesSecondString.get(0), nodesSecondString.get(1), nodesSecondString.get(2), findNodes(strg2).get(3));
 		return temp1 + temp2 + temp3;
 	}
 }
