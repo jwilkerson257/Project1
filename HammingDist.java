@@ -59,6 +59,7 @@ public class HammingDist
 		for (int k = 0; k < STID.size(); k++)
 		{
 			dist = findHammingDist(strg1, STID.get(k));
+			nodes.set(dist, nodes.get(dist));
 		}
 		return nodes;
 	}
