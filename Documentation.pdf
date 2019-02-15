@@ -1,0 +1,6 @@
+# Project1
+1. Created String variables in order to hold the two inputs that were STID values
+2. Created a method called findHammingDist that found the hamming distance between two STID values and returned the integer value of it
+3. Completed the readFile method by creating a BufferedReader object that reads the input file of Mesonet.txt and fills an Array List of strings with STID values that is pulled from the first 4 characters after a space on every line after the first four lines.
+4. Created and completed the findNodes method that has an integer array list that only has 4 indexes, each one representing the possible hamming distance from a certain STID not including itself. After every comparison it assigned the value to an int vaiable that was the argument of a switch statement and performed the correct operation of increasing the value at the given index by one according to the hamming distance
+5. Finally the toString method was completed by making two integer array lists holding the node values of two specified STID values. Next 3 String variables were created and were written according to the specified output and utilized String.format in order assign the node values and hamming distance values within the string. Finally all were combined in a return statement that displayed the correct output
