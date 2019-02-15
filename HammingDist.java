@@ -113,6 +113,7 @@ public class HammingDist
 	 */
 	public String toString()
 	{
+		//ArrayList of the nodes each STID has
 		ArrayList<Integer> nodesFirstString = findNodes(strg1);
 		ArrayList<Integer> nodesSecondString = findNodes(strg2);
 		String temp1 = String.format("The Hamming Distance of %s and %s: %d.\n", strg1, strg2, findHammingDist(strg1, strg2));
