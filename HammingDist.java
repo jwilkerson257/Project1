@@ -37,7 +37,7 @@ public class HammingDist
 	
 	/*
 	 * Constructor for the HammingDist class that assigns the inputs
-	 *  to two global string variables and calls the readFile method
+	 * to two global string variables and calls the readFile method
 	 * 
 	 */
 	public HammingDist(String strg1, String strg2) throws IOException
@@ -47,6 +47,10 @@ public class HammingDist
 		readFile();
 	}
 	
+	/*
+	 * Finds the Hamming distance between two strings
+	 * 
+	 */
 	public int findHammingDist(String strg1, String strg2)
 	{
 		int dist = 0;
