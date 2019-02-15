@@ -10,11 +10,6 @@ public class HammingDist
 	String strg2;
 	ArrayList<String> STID = new ArrayList<String>();
 	
-	public HammingDist(String strg1, String strg2)
-	{
-		this.strg1 = strg1;
-		this.strg2 = strg2;
-	}
 	
 	public void readFile() throws IOException
 	{
@@ -33,6 +28,13 @@ public class HammingDist
 		in.close();
 		
 		
+	}
+	
+	public HammingDist(String strg1, String strg2) throws IOException
+	{
+		this.strg1 = strg1;
+		this.strg2 = strg2;
+		readFile();
 	}
 	
 	public int findHammingDist(String strg1, String strg2)
@@ -59,8 +61,27 @@ public class HammingDist
 		int temp = 0;
 		for (int k = 0; k < STID.size(); k++)
 		{
-			dist = findHammingDist(strg, STID.get(k));
-			nodes.set(dist-1, (nodes.get(dist-1) + 1));
+			if (dist != 0)
+			{
+				dist = findHammingDist(strg, STID.get(k));
+				temp = nodes.get(dist-1) + 1;
+				if (dist == 1)
+				{
+					nodes.set(0, temp);
+				}
+				if (dist == 2)
+				{
+					nodes.set(1, temp);
+				}
+				if (dist == 3)
+				{
+					nodes.set(2, temp);
+				}
+				if (dist == 4)
+				{
+					nodes.set(3, temp);
+				}
+			}
 		}
 		return nodes;
 	}
@@ -70,6 +91,6 @@ public class HammingDist
 		String temp1 = String.format("The Hamming Distance of %s and %s: %d.\n", strg1, strg2, findHammingDist(strg1, strg2));
 		String temp2 = String.format("Out of 119, for %s, number of nodes are: %d, %d, %d, %d and\n",strg1, findNodes(strg1).get(0), findNodes(strg1).get(1), findNodes(strg1).get(2), findNodes(strg1).get(3));
 		String temp3 = String.format("for %s, number of nodes are: %d, %d, %d, %d respectively.",strg2, findNodes(strg2).get(0), findNodes(strg2).get(1), findNodes(strg2).get(2), findNodes(strg2).get(3));
-		return temp1+temp2+temp3;
+		return temp1 + temp2 + temp3;
 	}
 }
