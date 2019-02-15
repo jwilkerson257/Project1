@@ -105,6 +105,10 @@ public class HammingDist
 		return nodes;
 	}
 	
+	/*
+	 * Formats the output of a HammDist object to the specified qualifications
+	 * 
+	 */
 	public String toString()
 	{
 		ArrayList<Integer> nodesFirstString = findNodes(strg1);
