@@ -57,6 +57,7 @@ public class HammingDist
 		int dist = 0;
 		for (int k = 0; k < 4; k++)
 		{
+			//Compares the two strings inputted
 			if (strg1.charAt(k) != strg2.charAt(k))
 			{
 				dist++;
