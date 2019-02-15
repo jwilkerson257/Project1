@@ -78,6 +78,7 @@ public class HammingDist
 		nodes.add(0);
 		nodes.add(0);
 		int dist = 0;
+		//temp is used as a temporary variable to hold the current value of an element at a specific index and then increases it by one
 		int temp = 0;
 		for (int k = 0; k < STID.size(); k++)
 		{
