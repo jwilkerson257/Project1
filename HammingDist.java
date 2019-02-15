@@ -11,7 +11,10 @@ public class HammingDist
 	ArrayList<String> STID = new ArrayList<String>();
 	String srcFile = "Mesonet.txt";
 	
-	
+	/*
+	 * This method reads the Mesonet.txt file and fills an Array List of strings with STID values
+	 * that is pulled from the first 4 characters after a space on every line after the first four lines.
+	 */
 	public void readFile() throws IOException
 	{
 		BufferedReader in = new BufferedReader(new FileReader(new File(srcFile)));
@@ -20,6 +23,7 @@ public class HammingDist
 		in.readLine();
 		int count = 0;
 		String temp = "";
+		// The while loop fills an Array List with STID values
 		while (count < 120)
 		{
 			temp = in.readLine();
