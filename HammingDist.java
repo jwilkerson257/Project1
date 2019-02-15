@@ -66,21 +66,20 @@ public class HammingDist
 			{
 				dist = findHammingDist(strg, STID.get(k));
 				temp = nodes.get(dist-1) + 1;
-				if (dist == 1)
+				switch (dist)
 				{
+				case 1:
 					nodes.set(0, temp);
-				}
-				if (dist == 2)
-				{
+					break;
+				case 2:
 					nodes.set(1, temp);
-				}
-				if (dist == 3)
-				{
+					break;
+				case 3:
 					nodes.set(2, temp);
-				}
-				if (dist == 4)
-				{
+					break;
+				case 4:
 					nodes.set(3, temp);
+					break;
 				}
 			}
 		}
