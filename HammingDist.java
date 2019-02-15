@@ -19,6 +19,7 @@ public class HammingDist
 	public void readFile() throws IOException
 	{
 		BufferedReader in = new BufferedReader(new FileReader(new File(srcFile)));
+		//The three readLine commands skip the first three lines that do not contain STID values
 		in.readLine();
 		in.readLine();
 		in.readLine();
