@@ -120,6 +120,7 @@ public class HammingDist
 		//ArrayList of the nodes each STID has
 		ArrayList<Integer> nodesFirstString = findNodes(strg1);
 		ArrayList<Integer> nodesSecondString = findNodes(strg2);
+		//The output is split up into three strings in order to increase clarity more easily utilize string.format and not lose track of variables
 		String temp1 = String.format("The Hamming Distance of %s and %s: %d.\n", strg1, strg2, findHammingDist(strg1, strg2));
 		String temp2 = String.format("Out of 119, for %s, number of nodes are: %d, %d, %d, %d and\n",strg1, nodesFirstString.get(0), nodesFirstString.get(1), nodesFirstString.get(2), nodesFirstString.get(3));
 		String temp3 = String.format("for %s, number of nodes are: %d, %d, %d, %d respectively.",strg2, nodesSecondString.get(0), nodesSecondString.get(1), nodesSecondString.get(2), findNodes(strg2).get(3));
