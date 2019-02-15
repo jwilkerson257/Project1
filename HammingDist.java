@@ -81,6 +81,7 @@ public class HammingDist
 		int temp = 0;
 		for (int k = 0; k < STID.size(); k++)
 		{
+			//if statement is used so when it compares the same STID value to itself, it ignores it
 			if (!strg.equals(STID.get(k)))
 			{
 				dist = findHammingDist(strg, STID.get(k));
