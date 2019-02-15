@@ -12,8 +12,9 @@ public class HammingDist
 	String srcFile = "Mesonet.txt";
 	
 	/*
-	 * This method reads the Mesonet.txt file and fills an Array List of strings with STID values
-	 * that is pulled from the first 4 characters after a space on every line after the first four lines.
+	 * This method reads the Mesonet.txt file and fills an Array List of strings with STID values that
+	 * is pulled from the first 4 characters after a space on every line after the first four lines.
+	 * 
 	 */
 	public void readFile() throws IOException
 	{
@@ -32,10 +33,13 @@ public class HammingDist
 			count++;
 		}
 		in.close();
-		
-		
 	}
 	
+	/*
+	 * Constructor for the HammingDist class that assigns the inputs
+	 *  to two global string variables and calls the readFile method
+	 * 
+	 */
 	public HammingDist(String strg1, String strg2) throws IOException
 	{
 		this.strg1 = strg1;
